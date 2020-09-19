@@ -1,0 +1,1 @@
+/usr/bin/g++-7  -pthread  -O0 -Wall -g2 -ggdb   CMakeFiles/multithreadInCpp.dir/src/CppThreadTest.cpp.o CMakeFiles/multithreadInCpp.dir/src/Producer.cpp.o CMakeFiles/multithreadInCpp.dir/src/consumer.cpp.o CMakeFiles/multithreadInCpp.dir/src/container.cpp.o  -o multithreadInCpp 

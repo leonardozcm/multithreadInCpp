@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/chriskafka/project/multithreadInCpp/build",
+  "command": "/usr/bin/g++-7   -I/home/chriskafka/project/multithreadInCpp/include  -pthread  -O0 -Wall -g2 -ggdb   -o CMakeFiles/multithreadInCpp.dir/src/CppThreadTest.cpp.o -c /home/chriskafka/project/multithreadInCpp/src/CppThreadTest.cpp",
+  "file": "/home/chriskafka/project/multithreadInCpp/src/CppThreadTest.cpp"
+},
+{
+  "directory": "/home/chriskafka/project/multithreadInCpp/build",
+  "command": "/usr/bin/g++-7   -I/home/chriskafka/project/multithreadInCpp/include  -pthread  -O0 -Wall -g2 -ggdb   -o CMakeFiles/multithreadInCpp.dir/src/Producer.cpp.o -c /home/chriskafka/project/multithreadInCpp/src/Producer.cpp",
+  "file": "/home/chriskafka/project/multithreadInCpp/src/Producer.cpp"
+},
+{
+  "directory": "/home/chriskafka/project/multithreadInCpp/build",
+  "command": "/usr/bin/g++-7   -I/home/chriskafka/project/multithreadInCpp/include  -pthread  -O0 -Wall -g2 -ggdb   -o CMakeFiles/multithreadInCpp.dir/src/consumer.cpp.o -c /home/chriskafka/project/multithreadInCpp/src/consumer.cpp",
+  "file": "/home/chriskafka/project/multithreadInCpp/src/consumer.cpp"
+},
+{
+  "directory": "/home/chriskafka/project/multithreadInCpp/build",
+  "command": "/usr/bin/g++-7   -I/home/chriskafka/project/multithreadInCpp/include  -pthread  -O0 -Wall -g2 -ggdb   -o CMakeFiles/multithreadInCpp.dir/src/container.cpp.o -c /home/chriskafka/project/multithreadInCpp/src/container.cpp",
+  "file": "/home/chriskafka/project/multithreadInCpp/src/container.cpp"
+}
+]
