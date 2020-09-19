@@ -13,7 +13,7 @@ private:
     /* data */
     std::shared_ptr<container> cter;
 public:
-    Producer(std::shared_ptr<container> sls);
+    Producer(std::shared_ptr<container> &sls);
     void conduct();  
     
     ~Producer();

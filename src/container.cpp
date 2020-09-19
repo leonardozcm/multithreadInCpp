@@ -13,11 +13,21 @@ void container::pushback(int item){
     sem_wait(&block);
     sem_wait(&mutex);
     slots[++rear]=item;
+    log(1,item);
     sem_post(&mutex);
     sem_post(&items);
     
 }
-
+void container::log(int isPdc,int item){
+    const char* logs=isPdc?"   produce  ":"   consume  ";
+    std::cout<<std::this_thread::get_id()<<logs<<item<<" [";
+    for (int i = 0; i < rear; i++)
+    {
+        /* code */
+        std::cout<<i<<",";
+    }
+    std::cout<<"]\n";
+}
 void container::pop(){
     sem_wait(&items);
     sem_wait(&mutex);
@@ -29,13 +39,7 @@ void container::pop(){
     }
     slots[rear]=0;
     rear--;
-    std::cout<<std::this_thread::get_id()<<" consume "<<head<<" [";
-    for (int i = 0; i < rear; i++)
-    {
-        /* code */
-        std::cout<<i<<",";
-    }
-    std::cout<<"]\n";
+    log(0,head);
     sem_post(&mutex);
     sem_post(&block);
     

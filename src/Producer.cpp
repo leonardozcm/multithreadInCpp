@@ -1,5 +1,5 @@
 #include "Producer.h"
-Producer::Producer( std::shared_ptr<container> sls)
+Producer::Producer( std::shared_ptr<container> &sls)
 {
     cter=sls;
 }                                   
@@ -10,7 +10,6 @@ void Producer::conduct()
     {
         /* code */
         cter.get()->pushback(rand()%10);
-        sleep(1);
     }
     
 }

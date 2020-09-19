@@ -23,12 +23,14 @@ void func(std::thread::id id)
 
 void runThreads()
 {
-    container cter(15);
-    // std::shared_ptr<container> sls(&cter);
-    // Producer pdr(sls);
-    // consumer csm(sls);
+    std::shared_ptr<container> sls(new container(15));
+    Producer pdr(sls);
+    consumer csm(sls);
 
-    // std::thread pdrthread(pdr.conduct());
+    std::thread pdrthread(&Producer::conduct,pdr);
+    std::thread csmthread(&consumer::consume,csm);
+    pdrthread.join();
+    csmthread.join();
 
 
 //     std::thread t1(func,std::this_thread::get_id());

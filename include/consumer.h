@@ -11,7 +11,7 @@ private:
     /* data */
     std::shared_ptr<container> cter;
 public:
-    consumer(std::shared_ptr<container> sls);
+    consumer(std::shared_ptr<container> &sls);
     void consume();
     ~consumer();
 };

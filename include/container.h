@@ -17,6 +17,7 @@ public:
     container(int maxContain);
     void pushback(int item);
     void pop();
+    void log(int isPdc,int item);
     ~container();
 };
 #endif /*_CONTAINER*/
