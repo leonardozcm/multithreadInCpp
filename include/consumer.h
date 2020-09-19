@@ -1,3 +1,5 @@
+#ifndef _CONSUMER
+#define _CONSUMER
 #include <memory>
 #include <iostream>
 #include <stdlib.h>
@@ -13,21 +15,4 @@ public:
     void consume();
     ~consumer();
 };
-
-consumer::consumer(std::shared_ptr<container> sls)
-{
-    cter=sls;
-}
-
-void consumer::consume(){
-    while (1)
-    {
-        cter.get()->pop();
-        sleep(1);
-    }
-    
-}
-
-consumer::~consumer()
-{
-}
+#endif /*_CONSUMER*/

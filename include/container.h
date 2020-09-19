@@ -1,3 +1,5 @@
+#ifndef _CONTAINER
+#define  _CONTAINER
 #include <semaphore.h>
 #include<thread>
 #include <iostream>
@@ -17,3 +19,4 @@ public:
     void pop();
     ~container();
 };
+#endif /*_CONTAINER*/

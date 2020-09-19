@@ -3,6 +3,7 @@
 #include<mutex>
 #include <unistd.h>
 #include<memory>
+#include "container.h"
 #include "Producer.h"
 #include "consumer.h"
 
@@ -23,18 +24,20 @@ void func(std::thread::id id)
 void runThreads()
 {
     container cter(15);
-    std::shared_ptr<container> sls(&cter);
-    Producer pdr(sls);
-    consumer csm(sls);
+    // std::shared_ptr<container> sls(&cter);
+    // Producer pdr(sls);
+    // consumer csm(sls);
+
+    // std::thread pdrthread(pdr.conduct());
 
 
-    std::thread t1(func,std::this_thread::get_id());
-    std::thread t2(func,std::this_thread::get_id());
-    std::thread t3(func,std::this_thread::get_id());
+//     std::thread t1(func,std::this_thread::get_id());
+//     std::thread t2(func,std::this_thread::get_id());
+//     std::thread t3(func,std::this_thread::get_id());
 
-    t1.join();
-    t2.join();
-    t3.join();
+//     t1.join();
+//     t2.join();
+//     t3.join();
 }
 
 int main()
