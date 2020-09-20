@@ -7,12 +7,14 @@ container::container(int maxContain)
     sem_init(&mutex,0,1);
     sem_init(&items,0,0);
     sem_init(&block,0,maxContain);
-}
+}                                                                                                           
 
 void container::pushback(int item){
+
     sem_wait(&block);
     sem_wait(&mutex);
-    slots[++rear]=item;
+    slots[rear++]=item;
+    // rear++;
     log(1,item);
     sem_post(&mutex);
     sem_post(&items);
@@ -24,9 +26,9 @@ void container::log(int isPdc,int item){
     for (int i = 0; i < rear; i++)
     {
         /* code */
-        std::cout<<i<<",";
+        std::cout<<slots[i]<<",";
     }
-    std::cout<<"]\n";
+    std::cout<<"]"<<" rear:"<<rear<<"\n";
 }
 void container::pop(){
     sem_wait(&items);

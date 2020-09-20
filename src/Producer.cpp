@@ -10,6 +10,7 @@ void Producer::conduct()
     {
         /* code */
         cter.get()->pushback(rand()%10);
+        // sleep(1);
     }
     
 }

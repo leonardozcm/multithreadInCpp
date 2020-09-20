@@ -29,8 +29,9 @@ void runThreads()
 
     std::thread pdrthread(&Producer::conduct,pdr);
     std::thread csmthread(&consumer::consume,csm);
-    pdrthread.join();
+    
     csmthread.join();
+    pdrthread.join();
 
 
 //     std::thread t1(func,std::this_thread::get_id());
